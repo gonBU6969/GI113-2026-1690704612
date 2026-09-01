@@ -44,54 +44,97 @@ namespace Lab02
 
 
             // Lab02 Part B
-            string hero1Name = "Anya";
-            int hero1Hp = 120;
-            float hero1Atk = 18.5f;
-            double hero1CritRate = 0.15;
-            char hero1Rank = 'A';
+            Console.WriteLine("=====Struggle World =====");
+            //ชื่อตัวละคร
+            string humanName = "Zephyr";
+            string dwarfName = "Morwen";
+            string elfName = "Krynn";
+            string orcName = "Vesper";
+            // ระดับของตัวละคร
+            char humanRank = 'A';
+            char dwarfRank = 'B';
+            char elfRank = 'C';
+            char orcRank = 'C';
+            // เผ่าพันธุ์ของตัวละคร
+            string raceZephyr = "The Sylvan";
+            string raceMorwen = "The Iron";
+            string raceKrynn = "The Solari";
+            string raceVesper = "The Abyssal";
+            // อาชีพของตัวละคร
+            string classZephyr = "Glass Blower";
+            string classMorwen = "Broker";
+            string classKrynn = "Cartographer";
+            string classVesper = "Sculptor";
+            // เลเวลของตัวละคร
+            int levelZephyr = 5;
+            int levelMorwen = 4;
+            int levelKrynn = 3;
+            int levelVesper = 3;
+            // ค่าพลังโจมตีของตัวละคร
+            float attackPowerZephyr = 16.5f;
+            float attackPowerMorwen = 10.0f;
+            float attackPowerKrynn = 20.6f;
+            float attackPowerVesper = 12.5f;
+            // ค่าพลังชีวิตของตัวละคร
+            int maxHpZephyr = 100;
+            int maxHpMorwen = 140;
+            int maxHpKrynn = 70;
+            int maxHpVesper = 100;
+            // ค่าตัวคูณคริติคอลของตัวละคร
+            double critMultiplierZephyr = 1.4;
+            double critMultiplierMorwen = 1.2;
+            double critMultiplierKrynn = 1.8;
+            double critMultiplierVesper = 1.3;
+            // สถานะการเป็นสมาชิกปาร์ตี้ของตัวละคร
+            bool isPartyMemberZephyr = true;
+            bool isPartyMemberMorwen = true;
+            bool isPartyMemberKrynn = true;
+            bool isPartyMemberVesper = true;
 
 
-
-            Console.WriteLine("----- HERO 1 -----");
-            Console.WriteLine($"Name: {hero1Name}");
-            Console.WriteLine($"HP: {hero1Hp}");
-            // 1. การปริ้นค่าใหม่ โดยใช้ตัวแปรใหม่
-            string hero2Name = "Max";
-            int hero2Hp = 200;
-            Console.WriteLine("----- HERO 2 -----");
-            Console.WriteLine($"Name: {hero2Name}");
-            Console.WriteLine($"HP: {hero2Hp}");
-
-            // 2. การปริ้นค่าใหม่ โดยใช้ตัวแปรเดิม ผ่านการ assign ค่าเข้าใหม่
-            string heroName = "Min";
-            int money = 100;
-            Console.WriteLine("----- HERO 3 -----");
-            Console.WriteLine($"Name: {heroName}");
-            Console.WriteLine($"HP: {money}");
-
-            heroName = "Sum";
-            money = 300;
-            Console.WriteLine("----- HERO 4 -----");
-            Console.WriteLine($"Name: {heroName}");
-            Console.WriteLine($"HP: {money}");
-
-            // 1. การเว้นบรรทัดแบบปริ้นช่องว่าง
-            Console.WriteLine("I AM HUNGRY");
+            Console.WriteLine("=====CHARACTER STATUS: INITIAL =====");
+            Console.WriteLine($"Name: {humanName}");
+            Console.WriteLine($"Rank: {humanRank}");
+            Console.WriteLine($"Race: {raceZephyr}");
+            Console.WriteLine($"Class: {classZephyr}");
+            Console.WriteLine($"Level: {levelZephyr}");
+            Console.WriteLine($"Max HP: {maxHpZephyr}");
+            Console.WriteLine($"Attack Power: {attackPowerZephyr}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplierZephyr}");
+            Console.WriteLine($"Is Party Member: {isPartyMemberZephyr}");
             Console.WriteLine();
-            Console.WriteLine("I GO EAT");
+            Console.WriteLine($"Name: {dwarfName}");
+            Console.WriteLine($"Rangk: {dwarfRank}");
+            Console.WriteLine($"Race: {raceMorwen}");
+            Console.WriteLine($"Class: {classMorwen}");
+            Console.WriteLine($"Level: {levelMorwen}");
+            Console.WriteLine($"Max HP: {maxHpMorwen}");
+            Console.WriteLine($"Attack Power: {attackPowerMorwen}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplierMorwen}");
+            Console.WriteLine($"Is Party Member: {isPartyMemberMorwen}");
+            Console.WriteLine();
+            Console.WriteLine($"Name: {elfName}");
+            Console.WriteLine($"Rank: {elfRank}");
+            Console.WriteLine($"Race: {raceKrynn}");
+            Console.WriteLine($"Class: {classKrynn}");
+            Console.WriteLine($"Level: {levelKrynn}");
+            Console.WriteLine($"Max HP: {maxHpKrynn}");
+            Console.WriteLine($"Attack Power: {attackPowerKrynn}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplierKrynn}");
+            Console.WriteLine($"Is Party Member: {isPartyMemberKrynn}");
+            Console.WriteLine();
+            Console.WriteLine($"Name: {orcName}");
+            Console.WriteLine($"Rank: {orcRank}");
+            Console.WriteLine($"Race: {raceVesper}");
+            Console.WriteLine($"Class: {classVesper}");
+            Console.WriteLine($"Level: {levelVesper}");
+            Console.WriteLine($"Max HP: {maxHpVesper}");
+            Console.WriteLine($"Attack Power: {attackPowerVesper}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplierVesper}");
+            Console.WriteLine($"Is Party Member: {isPartyMemberVesper}");
+            Console.WriteLine();
 
-            // 2. แบบใช้ \n เพื่อเว้นบรรทัด
-            Console.WriteLine("\nI AM HUNGRY\n");
-            Console.WriteLine("I GO EAT");
 
-            // 3. แบบใช้ \n และลดการพิมพ์ Console.Write
-            Console.WriteLine("\nI AM HUNGRY\n\nI GO EAT");
-
-            // 4. แบบ Hybrid ใช้บรรทัดใหม่ และ \n รวม +
-            Console.WriteLine("\nI AM HUNGRY" +
-                "\nI GO EAT" +
-                "\nI AM SLEEPY" +
-                "\nI GO SLEEP");
 
 
         }
