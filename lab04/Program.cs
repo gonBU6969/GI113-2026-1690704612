@@ -1,4 +1,4 @@
-﻿namespace lab04
+﻿namespace Lab04
 
 {
 
