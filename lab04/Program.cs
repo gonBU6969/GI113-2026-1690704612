@@ -1,50 +1,85 @@
-﻿namespace Lab03
+﻿namespace Lab04
+
 {
+
     internal class Program
     {
+
         static void Main(string[] args)
+
         {
-            const int MaxLevel = 10;
 
-            var bossName = "Kirin";   // ต้องประกาศด้วย var ห้ามเขียน string ตรงๆ
-            var rank = 'S';            // ต้องประกาศด้วย var ห้ามเขียน char ตรงๆ
-            int level = 7;
-            int maxHp = 240;
-            int currentHp = 115;       // ค่าตั้งต้นของ Lab นี้คือ HP "หลังโดนโจมตี" จาก Lab 2 แล้ว ไม่ใช่ 175
-            float attackPower = 42.5f;
-            double critMultiplier = 1.75;
-            bool isBoss = true;
+            Console.WriteLine("+------------------------------+");
 
-            Console.WriteLine("===== KIRIN SAVE CONVERTER =====");
-            Console.WriteLine($"Name: {bossName}");
-            Console.WriteLine($"Rank: {rank}");
-            Console.WriteLine($"Level: {level} / {MaxLevel}");
-            Console.WriteLine($"HP: {currentHp} / {maxHp}");
-            Console.WriteLine($"Attack Power: {attackPower}");
-            Console.WriteLine($"Crit Multiplier: {critMultiplier}");
-            Console.WriteLine($"Is Boss: {isBoss}");
-            Console.WriteLine();
+            Console.WriteLine("|      CHARACTER CREATION       |");
 
-            Console.WriteLine("-----Implicit Conversion: HP as double -----");
-            double currentHpDouble = currentHp;
-            Console.WriteLine($" HP (double): {currentHpDouble}");
-            Console.WriteLine();
+            Console.WriteLine("+------------------------------+");
 
-            Console.WriteLine("----- Exact HP Percent (no integer truncation) -----");
-            double hpPercentExact = currentHpDouble * 100 / maxHp;
-            Console.WriteLine($"HP Percent(exact): {hpPercentExact}%");
-            Console.WriteLine("");
+            Console.Write("Name your character: ");
 
-            Console.WriteLine(" ----- Explicit Cast: Attack Power -> Display Int -----");
-            int attackDisplay = (int)attackPower;
-            Console.WriteLine($"Attack Power (int cast): {attackDisplay}");
-            Console.WriteLine();
+            string charName = Console.ReadLine();
 
-            Console.WriteLine("----- Cast vs Convert: Crit Multiplier -----");
-            int critCast = (int)critMultiplier;
-            int critConvert = Convert.ToInt32(critMultiplier);
-            Console.WriteLine($"Crit Multiplier (int cast): {critCast}");
-            Console.WriteLine($"Crit Multiplier (Convert rounded): {critConvert}");
+            Console.Write("Choose a class (1-3): ");
+
+            bool classOk = int.TryParse(Console.ReadLine(), out int classNum);
+
+            Console.Write("Starting luck (0.0-10.0): ");
+
+            bool luckOk = double.TryParse(Console.ReadLine(), out double luck);
+
+            Console.WriteLine($"{charName} the Class-{classNum} adventurer enters the dungeon. Luck: {luck}");
+
+            Console.WriteLine("+------------------------------+");
+
+            Console.WriteLine("|           ITEM SHOP           |");
+
+            Console.WriteLine("+------------------------------+");
+
+            Console.Write("How many potions? ");
+
+            bool quantityOk = int.TryParse(Console.ReadLine(), out int quantity);
+
+            Console.WriteLine($"Valid input: {quantityOk}");
+
+            Console.WriteLine($"Quantity: {quantity}");
+
+            Console.WriteLine("+------------------------------+");
+
+            Console.WriteLine("|          SET VOLUME           |");
+
+            Console.WriteLine("+------------------------------+");
+
+            Console.Write("Set music volume (0.0-1.0): ");
+
+            bool volumeOk = double.TryParse(Console.ReadLine(), out double volume);
+
+            Console.WriteLine($"Valid input: {volumeOk}");
+
+            Console.WriteLine($"Volume: {volume}");
+
+            Console.WriteLine("+------------------------------+");
+
+            Console.WriteLine("|         NEW SAVE FILE         |");
+
+            Console.WriteLine("+------------------------------+");
+
+            Console.Write("Enter save name: ");
+
+            string saveName = Console.ReadLine();
+
+            Console.Write("Choose save slot (1-3): ");
+
+            bool slotOk = int.TryParse(Console.ReadLine(), out int slot);
+
+            Console.WriteLine($"Save name: {saveName}");
+
+            Console.WriteLine($"Valid input: {slotOk}");
+
+            Console.WriteLine($"Slot: {slot}");
+
+
+
+
         }
+
     }
-}
